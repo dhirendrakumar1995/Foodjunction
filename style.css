@@ -1,0 +1,161 @@
+/* Global styles */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background: #f5f5dc;
+}
+
+/* Navbar styles */
+.navbar-fixed-top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background: #A52A2A;
+  line-height: 70px;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navbar-search-input {
+  flex: 1;
+  margin-top: 0;
+  margin-left: 20px;
+  padding: 0 10px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.navbar-search-button {
+  width: auto;
+  margin-top: 0;
+  margin-left: 10px;
+  padding: 0 20px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #FFDEAD;
+  color: #333;
+}
+
+.navbar-search-button:hover {
+  background-color: #F5F5DC;
+}
+
+.navbar-link {
+  color: #fff;
+  padding: 0 15px;
+}
+
+.navbar-link:hover {
+  color: #FFDEAD;
+}
+
+/* Data container styles */
+.data-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+  margin-top: 105px;
+  padding: 1%;
+}
+
+.meal-card {
+  text-align: center;
+}
+
+.meal-card img {
+  width: 100%;
+  margin: 20px;
+  border: 10px solid #e8f5e9;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.996);
+}
+
+.meal-card h4 {
+  color: #d50000;
+  text-shadow: 0 1px 10px rgba(253, 252, 252, 0.996);
+}
+
+.meal-description {
+  font-size: 15px;
+  font-weight: bold;
+  color: rgb(28, 27, 68);
+}
+
+/* Responsive adjustments for Navbar */
+@media (max-width: 768px) {
+  .navbar-fixed-top {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 10px;
+  }
+
+  .navbar-search-input {
+    margin-left: 10px;
+    padding: 0 5px;
+  }
+
+  .navbar-link, .navbar-search-button {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar-fixed-top {
+    flex-direction: column;
+    height: auto;
+    line-height: normal;
+    padding: 10px;
+  }
+
+  .navbar-search-input{
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+    padding: 14px;
+  }
+  .navbar-search-button {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  .navbar-search-button {
+    display: block; /* Show the button again */
+  }
+}
+
+/* Responsive adjustments for Data Grid */
+@media (max-width: 768px) {
+  .data-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 80px; /* Adjusted for smaller navbar */
+  }
+}
+
+@media (max-width: 480px) {
+  .data-container {
+    grid-template-columns: 1fr; /* One column grid for mobile */
+    grid-gap: 20px;
+    margin-top: 150px; /* Space for stacked navbar */
+  }
+  
+  .meal-card img {
+    margin: 10px;
+    border: 5px solid #e8f5e9; /* Smaller border on mobile */
+  }
+}
